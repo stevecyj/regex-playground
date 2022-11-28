@@ -1,5 +1,10 @@
-function trim(str) {
+function trimA(str) {
   return str.replace(/^\s+|\s+$/g, '');
 }
 
-console.log(trim('   foobar       '));
+// ? 惰性
+function trimB(str){
+  return str.replace(/^\s*(.*?)\s*$/g,'$1')
+}
+
+console.log(trimB('   foobar       '));
